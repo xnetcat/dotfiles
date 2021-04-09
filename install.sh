@@ -8,7 +8,7 @@ while read -r package; do
 done < ~/.dotfiles/arch-setup/packages.minimal
 
 # Link config
-echo "[INFO] Linking .config directory"
+echo "[INFO] Creating .xinitrc"
 echo "exec dwm" >> ~/.xinitrc
 
 # Install suckless utils
