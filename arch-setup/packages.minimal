@@ -1,0 +1,9 @@
+libxinerama
+libxft
+libx11
+webkit2gtk
+xorg-xrandr
+xorg-server
+xorg-xinit
+kitty
+neofetch
