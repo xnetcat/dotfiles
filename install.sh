@@ -2,10 +2,7 @@
 
 # Install packages
 echo "[INFO] Installing required packages"
-while read -r package; do
-    echo "[INFO] Installing $package"
-    sudo pacman -S --noconfirm "$package"
-done < ~/.dotfiles/arch-setup/packages.minimal
+sudo pacman -S $(cat ~/.dotfiles/arch-setup/packages.minimal)
 
 # Create xinitrc
 echo "[INFO] Creating .xinitrc"
