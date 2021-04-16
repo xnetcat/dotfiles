@@ -4,10 +4,10 @@
 echo "[INFO] Installing required packages"
 while read -r package; do
     echo "[INFO] Installing $package"
-    pacman -S --noconfirm "$package"
+    sudo pacman -S --noconfirm "$package"
 done < ~/.dotfiles/arch-setup/packages.minimal
 
-# Link config
+# Create xinitrc
 echo "[INFO] Creating .xinitrc"
 echo "exec dwm" >> ~/.xinitrc
 
