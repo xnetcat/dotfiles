@@ -43,7 +43,7 @@ sh ~/.screenlayout/monitor.sh &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Wallpaper
-nitrogen --restore &
+feh --bg-fill --randomize ~/.wallpapers/* &
 
 # Dex
 dex -a -s /etc/xdg/autostart/:~/.config/autostart/

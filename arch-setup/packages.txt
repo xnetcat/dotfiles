@@ -31,7 +31,6 @@ lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 acpi
 sysstat
-nitrogen
 bluez-utils
 rofi
 xcursor-neutral
@@ -54,4 +53,3 @@ galculator
 gtk-engine-murrine
 seahorse
 ttf-nerd-fonts-symbols
-xorg-xbacklight
