@@ -4,14 +4,14 @@
 
 # Install packages
 echo "[INFO] Installing required packages"
-sudo yay -Syu --needed --noconfirm - < ~/.dotfiles/arch-setup/packages.minimal
+sudo yay -Syu --needed --noconfirm - < ~/.dotfiles/arch-setup/packages.txt
 
 # Create backup folder
 mkdir ~/.backup_dotfiles
 
 # Create backup 
-mv ~/.config ~/.backup_dotfiles
-mv ~/.local/share/fonts ~/.backup_dotfiles
+mv -rf ~/.config ~/.backup_dotfiles/config
+mv -rf ~/.local/share/fonts ~/.backup_dotfiles/fonts
 
 # Copy config files
 export XDG_CONFIG_HOME=$HOME/.config
