@@ -39,3 +39,4 @@ tela-icon-theme-git
 zsh
 powerline-fonts
 docker
+xclip
