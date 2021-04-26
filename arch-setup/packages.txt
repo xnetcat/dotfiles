@@ -27,7 +27,7 @@ gvfs
 thunar
 thunar-volman
 thunar-archive-plugin
-xcursor-neutral
+capitaine-cursors
 archlinux-xdg-menu
 ttf-nerd-fonts-symbols
 gtk-engines
