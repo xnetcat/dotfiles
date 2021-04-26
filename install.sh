@@ -26,12 +26,6 @@ mv ~/.config ~/.backup_dotfiles/config 2> /dev/null
 mv ~/.local/share/fonts ~/.backup_dotfiles/fonts 2> /dev/null
 mv ~/.wallpapers ~/.backup_dotfiles/wallpapers 2> /dev/null
 
-# Copy config files
-echo "[INFO] Copy config files"
-export XDG_CONFIG_HOME=$HOME/.config
-cp -r ~/.dotfiles/config ~/.config 2> /dev/null
-cp ~/.dotfiles/home/.* ~/ 2> /dev/null
-
 # Set up fonts
 echo "[INFO] Setting up fonts"
 mkdir -p ~/.local/share/fonts
@@ -52,7 +46,7 @@ sudo systemctl enable lightdm.service
 
 # Start docker service
 echo "[INFO] Starting docker service"
-sudo systemctl start docker.service
+sudo systemctl enable docker.service
 
 # Install ohmyzsh
 echo "[INFO] Installing ohmyzsh"
@@ -63,6 +57,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 # Install nvm
 echo "[INFO] Installing nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+# Copy config files
+echo "[INFO] Copy config files"
+export XDG_CONFIG_HOME=$HOME/.config
+cp -r ~/.dotfiles/config ~/.config 2> /dev/null
+cp ~/.dotfiles/home/.* ~/ 2> /dev/null
 
 # Remove bash files
 mv .bash* ~/.backup_dotfiles/ 2> /dev/null
