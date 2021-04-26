@@ -26,7 +26,7 @@ super + shift + d
 
 # power-menu 
 super + shift + e
-     ~/.config/rofi/powermenu.sh
+    ~/.config/rofi/powermenu.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -137,46 +137,52 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
 #
 # Special hotkeys
 #
 
-# Multimedia keys
+# Raise Volume
 XF86AudioRaiseVolume
-  amixer -q set Master 5%+ unmute
+	amixer -D pulse sset Master 5%+ unmute
 
-# Still muøltimedia
+# Lower Volume
 XF86AudioLowerVolume
-  amixer -q set Master 5%- unmute
+	amixer -D pulse sset Master 5%- unmute
 
-# still
-XF86AudioMute
-  amixer -D pulse sset Master toggle-mute
-  
-# amixer -q set Master toggle
-# Simple amixer command seems to have problems unmuting device
+# Mute Volume
+XF86AudioRaiseVolume + XF86AudioLowerVolume
+	amixer -D pulse sset Master toggle-mute
 
-# Brightness up
-XF86MonBrightnessUp
-  xbacklight -inc 5
+# Command the player to toggle between play/pause
+XF86AudioPlay
+	playerctl --player=%any,spotify play-pause
 
-# And brightness down
-XF86MonBrightnessDown
-  xbacklight -dec 5
+# Command the player to stop
+XF86AudioPause
+	playerctl --player=%any,spotify stop
+
+# Command the player to skip to the next track
+XF86AudioNext
+	playerctl --player=%any,spotify next
+
+# Command the player to skip to the previous track
+XF86AudioPrev
+	playerctl --player=%any,spotify previous
 
 # Screenshot
 Print
-  scrot ~/Pictures/Screenshot-$(date +%F_%T).png
+	scrot ~/Pictures/Screenshot-$(date +%F_%T).png
 
 super+Print
-  ~/.config/bspwm/scripts/screenshot.sh
+	~/.config/bspwm/scripts/screenshot.sh
 
 # Shortcuts
 super + w 
-  firefox
+	firefox
 
 super + n 
-  thunar  
+	thunar 
 
 super + F1
-  ~/.config/bspwm/scripts/keybindings_rofi.sh
+	~/.config/bspwm/scripts/keybindings_rofi.sh
