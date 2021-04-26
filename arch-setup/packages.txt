@@ -15,6 +15,7 @@ lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 pulseaudio
 pavucontrol
+dmenu
 picom
 dex
 feh
@@ -22,6 +23,7 @@ dunst
 rofi
 scrot
 xdg-user-dirs-gtk
+xdg-open
 tumbler
 gvfs
 thunar
@@ -34,3 +36,5 @@ gtk-engines
 gtk-engine-murrine
 layan-gtk-theme-git
 tela-icon-theme-git
+zsh
+powerline-fonts
