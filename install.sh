@@ -1,6 +1,16 @@
 #!/bin/bash
 
 # Install yay
+if [[ -e /usr/bin/yay ]]; then
+    echo "[INFO] yay detected"    
+else
+    echo "[INFO] Installing yay"
+    cd /opt/
+    sudo git clone https://aur.archlinux.org/yay-git.git
+    sudo chown -R $(whoami):$(whoami) yay-git/
+    cd yay-git
+    makepkg -si
+fi
 
 # Install packages
 echo "[INFO] Installing required packages"
