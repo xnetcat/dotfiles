@@ -44,9 +44,13 @@ dbus-launch dconf load / < ~/.dotfiles/config/xed.dconf
 echo "[INFO] Starting lightdm service"
 sudo systemctl enable lightdm.service
 
-# Start docker service
-echo "[INFO] Starting docker service"
+# Configure docker
+echo "[INFO] Configuring docker"
 sudo systemctl enable docker.service
+sudo systemctl enable containerd.service
+sudo usermod -aG docker $USER
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "$HOME/.docker" -R
 
 # Install ohmyzsh
 echo "[INFO] Installing ohmyzsh"
