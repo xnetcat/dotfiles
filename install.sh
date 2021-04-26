@@ -18,18 +18,18 @@ sudo yay -Syu --needed --noconfirm - < ~/.dotfiles/arch-setup/packages.txt
 
 # Create backup folder
 echo "[INFO] Create backup folder"
-mkdir ~/.backup_dotfiles
+mkdir ~/.backup_dotfiles 2> /dev/null
 
 # Create backup 
 echo "[INFO] Create backup"
-mv ~/.config ~/.backup_dotfiles/config
-mv ~/.local/share/fonts ~/.backup_dotfiles/fonts
-mv ~/.wallpapers ~/.backup_dotfiles/wallpapers
+mv ~/.config ~/.backup_dotfiles/config 2> /dev/null
+mv ~/.local/share/fonts ~/.backup_dotfiles/fonts 2> /dev/null
+mv ~/.wallpapers ~/.backup_dotfiles/wallpapers 2> /dev/null
 
 # Copy config files
 echo "[INFO] Copy config files"
 export XDG_CONFIG_HOME=$HOME/.config
-cp -r ~/.dotfiles/config ~/.config
+cp -r ~/.dotfiles/config ~/.config 2> /dev/null
 cp ~/.dotfiles/home/.* ~/ 2> /dev/null
 
 # Set up fonts
@@ -44,17 +44,28 @@ cp -r ~/.dotfiles/wallpapers ~/.wallpapers
 
 # Start dbus
 echo "[INFO] Starting dbus"
-dbus-launch dconf load / < ~/.dotfiles/home/xed.dconf
+dbus-launch dconf load / < ~/.dotfiles/config/xed.dconf
 
-# Enable lightdm
-echo "[INFO] Enabling lightdm"
+# Start lightdm service
+echo "[INFO] Starting lightdm service"
 sudo systemctl enable lightdm.service
+
+# Start docker service
+echo "[INFO] Starting docker service"
+sudo systemctl start docker.service
 
 # Install ohmyzsh
 echo "[INFO] Installing ohmyzsh"
 export CHSH="yes"
 export RUNZSH="no"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install nvm
+echo "[INFO] Installing nvm"
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+# Remove bash files
+mv .bash* ~/.backup_dotfiles/ 2> /dev/null
 
 # done
 neofetch
