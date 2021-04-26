@@ -38,3 +38,4 @@ layan-gtk-theme-git
 tela-icon-theme-git
 zsh
 powerline-fonts
+docker
