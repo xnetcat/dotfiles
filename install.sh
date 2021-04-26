@@ -10,19 +10,20 @@ sudo yay -Syu --needed --noconfirm - < ~/.dotfiles/arch-setup/packages.txt
 mkdir ~/.backup_dotfiles
 
 # Create backup 
-mv -rf ~/.config ~/.backup_dotfiles/config
-mv -rf ~/.local/share/fonts ~/.backup_dotfiles/fonts
-mv -rf ~/.wallpapers ~/.backup_dotfiles/wallpapers
+mv ~/.config ~/.backup_dotfiles/config
+mv ~/.local/share/fonts ~/.backup_dotfiles/fonts
+mv ~/.wallpapers ~/.backup_dotfiles/wallpapers
 
 # Copy config files
 export XDG_CONFIG_HOME=$HOME/.config
 echo "export XDG_CONFIG_HOME=\$HOME/.config" >> ~/.bashrc
-cp -r ~/.dotfiles/config ~/.config 
+cp -r ~/.dotfiles/config ~/.config
+cp ~/.dotfiles/home/.* ~/ 2> /dev/null
 
 # Set up fonts
 mkdir -p ~/.local/share/fonts
 cp -r ~/.dotfiles/fonts ~/.local/share/fonts 
-sudo fc-cache -v -f
+sudo fc-cache -f
 
 # Copy wallpapers
 cp -r ~/.dotfiles/wallpapers ~/.wallpapers
