@@ -40,4 +40,3 @@ zsh
 powerline-fonts
 docker
 xclip
-dunstify
