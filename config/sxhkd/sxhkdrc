@@ -144,15 +144,15 @@ super + {Left,Down,Up,Right}
 
 # Raise Volume
 XF86AudioRaiseVolume
-	amixer -D pulse sset Master 5%+ unmute
+	~/.config/sxhkd/scripts/volume.sh up
 
 # Lower Volume
 XF86AudioLowerVolume
-	amixer -D pulse sset Master 5%- unmute
+	~/.config/sxhkd/scripts/volume.sh down
 
 # Mute Volume
 XF86AudioRaiseVolume + XF86AudioLowerVolume
-	amixer -D pulse sset Master toggle-mute
+	~/.config/sxhkd/scripts/volume.sh mute
 
 # Command the player to toggle between play/pause
 XF86AudioPlay
