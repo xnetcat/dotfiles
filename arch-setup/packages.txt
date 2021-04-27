@@ -40,3 +40,5 @@ zsh
 powerline-fonts
 docker
 xclip
+discord
+fuse

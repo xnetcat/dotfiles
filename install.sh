@@ -56,11 +56,20 @@ sudo chmod g+rwx "$HOME/.docker" -R
 echo "[INFO] Installing ohmyzsh"
 export CHSH="yes"
 export RUNZSH="no"
+export KEEP_ZSH="no"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Install nvm
 echo "[INFO] Installing nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+# Install better discord
+echo "[INFO] Installing BetterDiscord"
+curl -L https://github.com/BetterDiscord/Installer/releases/latest/download/BetterDiscord-Linux.AppImage -o ~/BetterDiscord-Linux.AppImage
+chmod +x ~/BetterDiscord-Linux.AppImage
+~/BetterDiscord-Linux.AppImage
+while pgrep betterdiscord > /dev/null; do sleep 1; done
+rm ~/BetterDiscord-Linux.AppImage
 
 # Copy config files
 echo "[INFO] Copy config files"
@@ -69,6 +78,7 @@ cp -r ~/.dotfiles/config ~/.config 2> /dev/null
 cp ~/.dotfiles/home/.* ~/ 2> /dev/null
 
 # Remove bash files
+echo "[INFO] Removing bash files"
 mv .bash* ~/.backup_dotfiles/ 2> /dev/null
 
 # done
