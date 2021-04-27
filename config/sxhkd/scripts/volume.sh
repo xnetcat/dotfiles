@@ -15,8 +15,16 @@ function is_mute {
 }
 
 function send_notification {
-    icon="audio-volume-medium"
-  	volume=$(get_volume)
+	volume=$(get_volume)
+
+	if ( (volume >= 75) ); then
+		icon="audio-volume-high"
+	elif ( (volume <= 25) ); then
+		icon="audio-volume-low"
+	else
+		icon"audio-volume-medium"
+	fi
+  	
   	bar=$(seq -s "─" 0 $((volume / 5)) | sed 's/[0-9]//g')
   	dunstify -i "$icon" -r 5555 -u normal "    $bar"
 }
