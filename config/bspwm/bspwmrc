@@ -37,8 +37,8 @@ sh ~/.screenlayout/monitor.sh &
 ~/.config/polybar/launch.sh &
 
 # Notifications
-
 /usr/bin/dunst &
+
 # Polkit
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
