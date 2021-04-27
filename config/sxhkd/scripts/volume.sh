@@ -15,9 +15,10 @@ function is_mute {
 }
 
 function send_notification {
-    volume=`get_volume`
-    bar=$(seq -s "─" $(($volume / 5)) | sed 's/[0-9]//g')
-    dunstify -i audio-volume-muted-blocking -t 8 -r 2593 -u normal "    $bar"
+    icon="audio-volume-medium"
+  	volume=$(get_volume)
+  	bar=$(seq -s "─" 0 $((volume / 5)) | sed 's/[0-9]//g')
+  	dunstify -i "$icon" -r 5555 -u normal "    $bar"
 }
 
 case $1 in
@@ -32,7 +33,7 @@ case $1 in
     mute)
 	amixer -D pulse sset Master toggle-mute
 	if is_mute ; then
-	    dunstify -i audio-volume-muted -t 8 -r 2593 -u normal "Mute"
+	    dunstify -i "audio-volume-muted" -r 5555 -u normal "Mute"
 	else
 	    send_notification
 	fi
