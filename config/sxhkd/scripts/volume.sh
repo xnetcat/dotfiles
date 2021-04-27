@@ -17,9 +17,9 @@ function is_mute {
 function send_notification {
 	volume=$(get_volume)
 
-	if ( (volume >= 75) ); then
+	if ( ($volume >= 75) ); then
 		icon="audio-volume-high"
-	elif ( (volume <= 25) ); then
+	elif ( ($volume <= 25) ); then
 		icon="audio-volume-low"
 	else
 		icon"audio-volume-medium"
