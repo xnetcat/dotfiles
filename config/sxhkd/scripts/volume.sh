@@ -22,7 +22,7 @@ function send_notification {
 	elif (($volume <= 25)); then
 		icon="audio-volume-low"
 	else
-		icon"audio-volume-medium"
+		icon="audio-volume-medium"
 	fi
   	
   	bar=$(seq -s "─" 0 $((volume / 5)) | sed 's/[0-9]//g')
