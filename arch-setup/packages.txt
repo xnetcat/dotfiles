@@ -38,6 +38,8 @@ gtk-engine-murrine
 layan-gtk-theme-git
 tela-icon-theme-git
 zsh
+zsh-autosuggestions
+zsh-fast-syntax-highlighting-git
 powerline-fonts
 docker
 xclip

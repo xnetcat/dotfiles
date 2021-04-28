@@ -15,7 +15,7 @@ ZSH_THEME="fino"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker pip python vscode)
+plugins=(git docker pip python vscode zsh-autosuggestions fast-syntax-highlighting)
 
 source ~/.profile
 source ~/.aliases
