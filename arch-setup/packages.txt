@@ -43,3 +43,5 @@ docker
 xclip
 discord
 fuse
+spotify
+spicetify-cli
