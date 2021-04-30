@@ -49,8 +49,6 @@ echo "[INFO] Configuring docker"
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 sudo usermod -aG docker $USER
-sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
-sudo chmod g+rwx "$HOME/.docker" -R
 
 # Install ohmyzsh
 echo "[INFO] Installing ohmyzsh"
