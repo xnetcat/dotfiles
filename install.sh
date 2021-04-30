@@ -36,8 +36,8 @@ mv ~/.wallpapers ~/.backup_dotfiles/wallpapers 2> /dev/null
 # Set up fonts
 echo "[INFO] Setting up fonts"
 mkdir -p ~/.local/share/fonts
-cp -r ~/.dotfiles/fonts ~/.local/share/fonts 
-sudo fc-cache -f
+cp -r ~/.dotfiles/fonts/* ~/.local/share/fonts 
+fc-cache -f
 
 # Copy wallpapers
 echo "[INFO] Copying wallpapers"
