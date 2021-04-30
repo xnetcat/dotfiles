@@ -57,13 +57,6 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 sudo usermod -aG docker $USER
 
-# Install ohmyzsh
-echo "[INFO] Installing ohmyzsh"
-export CHSH="yes"
-export RUNZSH="no"
-export KEEP_ZSH="no"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # Install nvm
 echo "[INFO] Installing nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
