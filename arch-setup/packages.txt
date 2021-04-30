@@ -1,5 +1,6 @@
 xorg-server
 xorg-xinit
+zsh
 xdg-utils
 playerctl
 zscroll
@@ -26,6 +27,7 @@ scrot
 xdg-user-dirs-gtk
 tumbler
 gvfs
+antigen-git
 thunar
 thunar-volman
 thunar-archive-plugin
@@ -36,9 +38,6 @@ gtk-engines
 gtk-engine-murrine
 layan-gtk-theme-git
 tela-icon-theme-git
-zsh
-zsh-autosuggestions
-zsh-fast-syntax-highlighting-git
 powerline-fonts
 docker
 xclip
