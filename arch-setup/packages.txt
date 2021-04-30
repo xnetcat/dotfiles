@@ -11,7 +11,6 @@ polybar
 i3lock
 network-manager-applet
 arandr
-xdg-open
 lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
