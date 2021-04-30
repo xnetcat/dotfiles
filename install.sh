@@ -13,8 +13,14 @@ else
 fi
 
 # Install packages
+echo "[INFO] Searching for updates"
+yay -Syu
+
 echo "[INFO] Installing required packages"
-sudo yay -Syu --needed --noconfirm - < ~/.dotfiles/arch-setup/packages.txt
+while read -r package; do
+    echo "[INFO] Installing $package"
+    yay -S --needed --noconfirm "$package"
+done < ~/.dotfiles/arch-setup/packages.txt
 
 # Create backup folder
 echo "[INFO] Create backup folder"
