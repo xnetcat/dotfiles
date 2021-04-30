@@ -3,6 +3,10 @@
 if [[ -t 1 ]]; then
     echo "[INFO] You are running in tty, can't procede"
 else
+    # Install nvm
+    echo "[INFO] Installing nvm"
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
     # Install better discord
     if [[ -t 1 ]]; then
         echo "[INFO] Running in tty can't install better discord"

@@ -57,15 +57,16 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 sudo usermod -aG docker $USER
 
-# Install nvm
-echo "[INFO] Installing nvm"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
-
 # Copy config files
 echo "[INFO] Copy config files"
 export XDG_CONFIG_HOME=$HOME/.config
-cp -r ~/.dotfiles/config ~/.config 2> /dev/null
+cp -R ~/.dotfiles/config ~/.config 2> /dev/null
 cp ~/.dotfiles/home/.* ~/ 2> /dev/null
+chmod -R +x ~/.config/bspwm/scripts
+chmod -R +x ~/.config/polybar/scripts
+chmod -R +x ~/.config/sxhkd/scripts
+chmod +x ~/.config/polybar/launch.sh
+chmod +x ~/.config/rofi/powermenu.sh
 
 # Remove bash files
 echo "[INFO] Removing bash files"
