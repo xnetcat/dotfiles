@@ -12,10 +12,11 @@ else
     makepkg -si
 fi
 
-# Install packages
+# Updates
 echo "[INFO] Searching for updates"
 yay -Syu
 
+# Install packages
 echo "[INFO] Installing required packages"
 while read -r package; do
     echo "[INFO] Installing $package"
