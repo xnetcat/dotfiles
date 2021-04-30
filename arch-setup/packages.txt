@@ -25,7 +25,6 @@ dunst
 rofi
 scrot
 xdg-user-dirs-gtk
-xdg-open
 tumbler
 gvfs
 thunar
