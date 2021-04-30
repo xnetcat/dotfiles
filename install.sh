@@ -25,6 +25,7 @@ done < ~/.dotfiles/arch-setup/packages.txt
 
 # Create backup folder
 echo "[INFO] Create backup folder"
+rm -rf ~/.backup_dotfiles 2> /dev/null
 mkdir ~/.backup_dotfiles 2> /dev/null
 
 # Create backup 
@@ -43,6 +44,17 @@ fc-cache -f
 echo "[INFO] Copying wallpapers"
 cp -r ~/.dotfiles/wallpapers ~/.wallpapers
 
+# Copy config files
+echo "[INFO] Copying config files"
+export XDG_CONFIG_HOME=$HOME/.config
+cp -R ~/.dotfiles/config ~/.config 2> /dev/null
+cp ~/.dotfiles/home/.* ~/ 2> /dev/null
+chmod -R +x ~/.config/bspwm/scripts
+chmod -R +x ~/.config/polybar/scripts
+chmod -R +x ~/.config/sxhkd/scripts
+chmod +x ~/.config/polybar/launch.sh
+chmod +x ~/.config/rofi/powermenu.sh
+
 # Start dbus
 echo "[INFO] Starting dbus"
 dbus-launch dconf load / < ~/.dotfiles/config/xed.dconf
@@ -56,17 +68,6 @@ echo "[INFO] Configuring docker"
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 sudo usermod -aG docker $USER
-
-# Copy config files
-echo "[INFO] Copy config files"
-export XDG_CONFIG_HOME=$HOME/.config
-cp -R ~/.dotfiles/config ~/.config 2> /dev/null
-cp ~/.dotfiles/home/.* ~/ 2> /dev/null
-chmod -R +x ~/.config/bspwm/scripts
-chmod -R +x ~/.config/polybar/scripts
-chmod -R +x ~/.config/sxhkd/scripts
-chmod +x ~/.config/polybar/launch.sh
-chmod +x ~/.config/rofi/powermenu.sh
 
 # Remove bash files
 echo "[INFO] Removing bash files"
