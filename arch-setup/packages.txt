@@ -15,6 +15,7 @@ arandr
 lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
+archlinux-xdg-menu
 pulseaudio
 pavucontrol
 dmenu

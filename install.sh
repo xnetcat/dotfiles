@@ -38,7 +38,7 @@ mv ~/.wallpapers ~/.backup_dotfiles/wallpapers 2> /dev/null
 echo "[INFO] Setting up fonts"
 mkdir -p ~/.local/share/fonts
 cp -r ~/.dotfiles/fonts/* ~/.local/share/fonts 
-fc-cache -f
+fc-cache -f -v
 
 # Copy wallpapers
 echo "[INFO] Copying wallpapers"
@@ -52,6 +52,10 @@ cp ~/.dotfiles/home/.* ~/ 2> /dev/null
 chmod -R +x ~/.config/bspwm/scripts
 chmod -R +x ~/.config/polybar/scripts
 chmod -R +x ~/.config/sxhkd/scripts
+chmod -R +x ~/.config/bspwm/bspwmrc
+chown -R $USER:$USER ~/.local
+chown -R $USER:$NEW_USER ~/.config
+chown $USER:$USER ~/.gtkrc-2.0
 chmod +x ~/.config/polybar/launch.sh
 chmod +x ~/.config/rofi/powermenu.sh
 
