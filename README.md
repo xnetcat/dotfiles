@@ -112,6 +112,6 @@ cd ~/.dotfiles
 - `XF86AudioPrev` - Command the player to skip to the previous track
 - `Print` - Screenshot (saved to ~/Pictures)
 - `super + Print` - open screenshot menu
-- `super + w` - open firefox
+- `super + w` - open brave
 - `super + n` - open file explorer
 - `super + F1` - open help message

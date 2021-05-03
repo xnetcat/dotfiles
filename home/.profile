@@ -6,7 +6,7 @@ export AWT_TOOLKIT=MToolkit
 # Environment variables
 export SHELL=zsh
 export TERMINAL=kitty
-export BROWSER=firefox
+export BROWSER=brave
 export EDITOR=vim
 export OPENER=xdg-open
 

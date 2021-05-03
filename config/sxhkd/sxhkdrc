@@ -178,9 +178,9 @@ Print
 super + Print
 	~/.config/bspwm/scripts/screenshot.sh
 
-# open firefox
+# open brave
 super + w 
-	firefox
+	brave
 
 # File explorer
 super + n 
