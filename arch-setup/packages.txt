@@ -18,6 +18,7 @@ lightdm-gtk-greeter-settings
 archlinux-xdg-menu
 pulseaudio
 pavucontrol
+brave-bin
 dmenu
 picom
 dex
