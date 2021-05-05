@@ -54,7 +54,7 @@ chmod -R +x ~/.config/polybar/scripts
 chmod -R +x ~/.config/sxhkd/scripts
 chmod -R +x ~/.config/bspwm/bspwmrc
 chown -R $USER:$USER ~/.local
-chown -R $USER:$NEW_USER ~/.config
+chown -R $USER:$USER ~/.config
 chown $USER:$USER ~/.gtkrc-2.0
 chmod +x ~/.config/polybar/launch.sh
 chmod +x ~/.config/rofi/powermenu.sh
