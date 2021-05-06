@@ -4,6 +4,11 @@ zsh
 xdg-utils
 playerctl
 zscroll
+ttf-iosevka
+unrar
+p7zip
+file-roller
+thunar-archive-plugin
 kitty
 neofetch
 bspwm
