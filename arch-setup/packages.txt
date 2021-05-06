@@ -4,7 +4,10 @@ zsh
 xdg-utils
 playerctl
 zscroll
-ttf-iosevka
+ttf-firacode
+noto-fonts
+noto-fonts-emoji
+noto-fonts-cjk
 unrar
 p7zip
 file-roller
