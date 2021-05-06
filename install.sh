@@ -77,6 +77,10 @@ sudo usermod -aG docker $USER
 echo "[INFO] Changing grub theme"
 sudo ~/.dotfiles/grub/install.sh
 
+# Change default shell
+echo "[INFO] Changing shell to zsh"
+chsh -s /usr/bin/zsh
+
 # Remove bash files
 echo "[INFO] Removing bash files"
 mv .bash* ~/.backup_dotfiles/ 2> /dev/null
