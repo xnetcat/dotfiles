@@ -8,6 +8,8 @@ ttf-firacode
 noto-fonts
 noto-fonts-emoji
 noto-fonts-cjk
+polkit
+polkit-gnome
 unrar
 p7zip
 file-roller
