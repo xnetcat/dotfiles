@@ -72,7 +72,7 @@ if [ "$bios_s" = "e" ]; then # efi
     echo "[INFO] Formatting boot partition"
     mkfs.fat -F32 "$boot"
     echo "[INFO] Mounting boot partition"
-    mkdir /mnt/boot/EFI
+    mkdir /mnt/boot/EFI -p
     mount "$boot" /mnt/boot/EFI
 else # legacy
     echo "[INFO] Formatting boot partition"
