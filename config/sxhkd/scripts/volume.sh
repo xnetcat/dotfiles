@@ -6,11 +6,11 @@
 # $./volume.sh mute
 
 function send_notification {
-	volume=$(amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1) > /dev/null
-  	bar=$(seq -s "─" 0 $(("$volume" / 3)) | sed 's/[0-9]//g')
+	volume=$(amixer -D pulse get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1) > /dev/null
+  	bar=$(seq -s "─" 0 $(("$volume" / 4)) | sed 's/[0-9]//g')
 	text="    $bar"
 
-	if amixer get Master | grep '%' | grep -oE '[^ ]+$' | grep off > /dev/null; then
+	if amixer -D pulse get Master | grep '%' | grep -oE '[^ ]+$' | grep off > /dev/null; then
 		icon="audio-volume-muted"
 		text="Muted"
 	elif [[ (("$volume" -gt 74)) ]]; then
@@ -23,8 +23,6 @@ function send_notification {
   	
   	dunstify -i "$icon" -r 5555 -u normal "$text"
 }
-
-
 
 case $1 in
     up)
