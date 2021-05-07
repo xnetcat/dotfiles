@@ -5,6 +5,7 @@ xdg-utils
 playerctl
 zscroll
 ttf-firacode
+alsa-utils
 noto-fonts
 noto-fonts-emoji
 noto-fonts-cjk
