@@ -8,6 +8,7 @@ ttf-firacode
 noto-fonts
 noto-fonts-emoji
 noto-fonts-cjk
+lxappearance-gtk3
 polkit
 polkit-gnome
 unrar
