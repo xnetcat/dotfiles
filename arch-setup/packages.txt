@@ -7,6 +7,7 @@ zscroll
 accountsservice
 net-tools
 ttf-firacode
+ttf-dejavu
 alsa-utils
 noto-fonts
 noto-fonts-emoji
