@@ -59,6 +59,10 @@ chown $USER:$USER ~/.gtkrc-2.0
 chmod +x ~/.config/polybar/launch.sh
 chmod +x ~/.config/rofi/powermenu.sh
 
+# Copy etc config
+echo "[INFO] Copying etc"
+sudo cp -f -r ~/.dotfiles/etc/* /etc
+
 # Start dbus
 echo "[INFO] Starting dbus"
 dbus-launch dconf load / < ~/.dotfiles/config/xed.dconf
