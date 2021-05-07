@@ -4,11 +4,14 @@ zsh
 xdg-utils
 playerctl
 zscroll
+accountsservice
+net-tools
 ttf-firacode
 alsa-utils
 noto-fonts
 noto-fonts-emoji
 noto-fonts-cjk
+lxappearance-gtk3
 polkit
 polkit-gnome
 unrar
@@ -22,6 +25,10 @@ sxhkd
 polybar
 i3lock
 network-manager-applet
+networkmanager-openvpn
+openvpn
+xorg-xinput
+xorg-xsetroot
 arandr
 lightdm
 lightdm-gtk-greeter

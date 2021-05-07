@@ -151,7 +151,7 @@ XF86AudioLowerVolume
 	~/.config/sxhkd/scripts/volume.sh down
 
 # Mute Volume
-XF86AudioRaiseVolume + XF86AudioLowerVolume
+super + F12
 	~/.config/sxhkd/scripts/volume.sh mute
 
 # Command the player to toggle between play/pause
