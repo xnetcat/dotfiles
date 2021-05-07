@@ -34,12 +34,6 @@ mv ~/.config ~/.backup_dotfiles/config 2> /dev/null
 mv ~/.local/share/fonts ~/.backup_dotfiles/fonts 2> /dev/null
 mv ~/.wallpapers ~/.backup_dotfiles/wallpapers 2> /dev/null
 
-# Set up fonts
-echo "[INFO] Setting up fonts"
-mkdir -p ~/.local/share/fonts
-cp -r ~/.dotfiles/fonts/* ~/.local/share/fonts 
-fc-cache -f -v
-
 # Copy wallpapers
 echo "[INFO] Copying wallpapers"
 cp -r ~/.dotfiles/wallpapers ~/.wallpapers
@@ -88,6 +82,10 @@ chsh -s /usr/bin/zsh
 # Remove bash files
 echo "[INFO] Removing bash files"
 mv .bash* ~/.backup_dotfiles/ 2> /dev/null
+
+# Reset font cache
+echo "[INFO] Resetting font cache"
+fc-cache -f -v
 
 # done
 neofetch
