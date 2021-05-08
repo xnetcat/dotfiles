@@ -29,7 +29,10 @@ neofetch
 bspwm
 sxhkd
 polybar
-i3lock
+i3lock-color-git
+imagemagick
+awk
+wmctrl
 network-manager-applet
 networkmanager-openvpn
 openvpn
