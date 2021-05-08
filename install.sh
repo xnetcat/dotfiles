@@ -77,7 +77,7 @@ sudo ~/.dotfiles/grub/install.sh
 
 # Change default shell
 echo "[INFO] Changing shell to zsh"
-chsh -s /usr/bin/zsh
+chsh -s /usr/bin/zsh $USER
 
 # Remove bash files
 echo "[INFO] Removing bash files"
