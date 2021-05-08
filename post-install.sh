@@ -13,7 +13,7 @@ while pgrep betterdiscord > /dev/null; do sleep 1; done
 rm -rf ~/BetterDiscord-Linux.AppImage
 
 # Configure spicetify
-echo "Configuring spicetify"
+echo "[INFO] Configuring spicetify"
 sudo chmod a+wr /opt/spotify
 sudo chmod a+wr /opt/spotify/Apps -R
 spicetify
@@ -24,3 +24,7 @@ spicetify config extensions dribbblish.js
 spicetify config current_theme Dribbblish color_scheme horizon
 spicetify config inject_css 1 replace_colors 1 overwrite_assets 1
 spicetify apply
+
+# Install rust
+echp "[INFO] Installing rust"
+rustup toolchain install stable

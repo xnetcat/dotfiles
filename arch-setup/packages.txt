@@ -36,6 +36,7 @@ openvpn
 xorg-xinput
 xorg-xsetroot
 arandr
+rustup
 lightdm
 lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
