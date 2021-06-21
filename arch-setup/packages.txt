@@ -12,6 +12,7 @@ ttf-freefont
 ttf-arphic-uming
 ttf-baekmuk
 ttf-nerd-fonts-symbols
+nerd-fonts-iosevka
 noto-fonts
 noto-fonts-emoji
 noto-fonts-cjk
