@@ -16,7 +16,7 @@ echo -n "Would you like to wipe and re-partition the disk $device ? (Y/n): "
 read -r wipe
 
 if [ ! "$wipe" = "n" ]; then
-    echo "[INFO]: Wiping the partition table..."
+    echo "Wiping the partition table..."
     wipefs -a -f "$device"
     sleep 1
 fi
@@ -33,7 +33,6 @@ clear
 
 lsblk "$device"
 echo ""
-echo "Now you will specify the partitions you have created"
 
 # Boot partition
 echo -n "Please enter boot partition (example: /dev/sda1): "
@@ -52,7 +51,7 @@ if [ "$swap_s" = "y" ]; then
 fi
 
 # Home partition
-echo -n "Did you create a home partition?(y/N): "
+echo -n "Did you create a home partition? (y/N): "
 read -r home_s
 if [ "$home_s" = "y" ]; then
     echo -n "Please enter home partition (example: /dev/sda4): "
@@ -60,41 +59,41 @@ if [ "$home_s" = "y" ]; then
 fi
 
 # Create root partition
-echo "[INFO] Formatting root partition"
+echo "Formatting root partition"
 mkfs.ext4 "$root"
-echo "[INFO] Mounting root partition"
+echo "Mounting root partition"
 mount "$root" /mnt
 
 # Create the boot partition
 echo -n "Do you want to use efi or legacy bios? (e/L): "
 read -r bios_s
 if [ "$bios_s" = "e" ]; then # efi
-    echo "[INFO] Formatting boot partition"
+    echo "Formatting boot partition"
     mkfs.fat -F32 "$boot"
-    echo "[INFO] Mounting boot partition"
+    echo "Mounting boot partition"
     mkdir /mnt/boot/EFI -p
     mount "$boot" /mnt/boot/EFI
 else # legacy
-    echo "[INFO] Formatting boot partition"
+    echo "Formatting boot partition"
     mkfs.ext4 "$boot"
-    echo "[INFO] Mounting boot partition"
+    echo "Mounting boot partition"
     mkdir /mnt/boot
     mount "$boot" /mnt/boot  
 fi
 
 # Create swap partition
 if [ "$swap_s" = "y" ]; then
-    echo "[INFO] Creating swap partition"
+    echo "Creating swap partition"
     mkswap "$swap"
-    echo "[INFO] Mounting swap partition"
+    echo "Mounting swap partition"
     swapon "$swap"
 fi
 
 # Create home partition
 if [ "$home_s" = "y" ]; then
-    echo "[INFO] Creating home partition"
+    echo "Creating home partition"
     mkfs.ext4 "$home"
-    echo "[INFO] Mounting home partition"
+    echo "Mounting home partition"
     mkdir /mnt/home
     mount "$home" /mnt/home
 fi
@@ -102,21 +101,21 @@ fi
 # Install
 echo "Press ENTER to install required packages"
 read -r _
-echo "[INFO] Installing required packages"
+echo "Installing required packages"
 pacstrap /mnt base base-devel linux linux-firmware git vim
 
 # Generate fstab entries for mounted partitions
-echo "[INFO] Generating fstab entries for mounted partitions"
+echo "Generating fstab entries for mounted partitions"
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Copy chroot script to /mnt
-echo "[INFO] Copying install script"
+echo "Copying install script"
 cp ~/.dotfiles/arch-setup/chroot.sh /mnt/root/chroot-install.sh
 
 # Set correct permissions for chroot scripts
-echo "[INFO] Setting permissions for chroot script"
+echo "Setting permissions for chroot script"
 chmod +x /mnt/root/chroot-install.sh 
 
 # Change root directory to arch
-echo "[INFO] Change arch root directory to /mnt"
+echo "Change arch root directory to /mnt"
 arch-chroot /mnt /root/chroot-install.sh
