@@ -6,7 +6,7 @@ sxhkd
 thunar
 bspwm
 dex
-picom
+picom-ibhagwan-git
 feh
 lxqt-policykit
 libsecret
@@ -17,6 +17,6 @@ rofimoji
 xdotool
 pavucontrol
 papirus-icon-theme
-nerd-fonts-jetbrains-mono
-nerd-fonts-iosevka
-ttf-icomoons-feather
+ttf-iosevka
+ttf-nerd-fonts-symbols
+ttf-jetbrains-mono
