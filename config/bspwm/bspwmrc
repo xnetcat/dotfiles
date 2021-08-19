@@ -5,18 +5,18 @@ normal=$(xrdb ~/.config/X11/xresources -query all | grep color8 | cut -f2)
 
 bspc monitor -d TERM CODE WEB FILES MEDIA EXTRA
 
-bspc config focused_border_color	"$focused"
-bspc config normal_border_color		"$normal"
-bspc config border_width		      2
-bspc config window_gap 			      10
-bspc config focus_follows_pointer	false
-bspc config top_padding           35
-bspc config split_ratio			      0.52
-bspc config borderless_monocle		true
-bspc config gapless_monocle		    false
-bspc config single_monocle		    true
+bspc config focused_border_color "focused"
+bspc config normal_border_color	 "normal"
+bspc config border_width 2
+bspc config window_gap 10
+bspc config focus_follows_pointer false
+bspc config top_padding 35
+bspc config split_ratio	0.52
+bspc config borderless_monocle true
+bspc config gapless_monocle false
+bspc config single_monocle true
 
-[[ -f ~/.config/X11/xresources ]] && xrdb -merge -I$HOME ~/.config/X11/xresources
+xrdb -merge -I $HOME ~/.config/X11/xresources
 
 # Set display from arandr saved script
 sh ~/.screenlayout/monitor.sh &
@@ -25,27 +25,7 @@ sh ~/.screenlayout/monitor.sh &
 ~/.config/polybar/launch.sh &
 
 # Notifications
-dunst -lb "#3d4361" \
-    -nb "#3d4361" \
-    -cb "#3d4361" \
-    -lf "#c0caf5" \
-    -bf "#c0caf5" \
-    -cf "#c0caf5" \
-    -nf "#c0caf5" \
-    -fn "Iosevka Extrabold 12" \
-    -s \
-    -geometry "280x6-10+43" \
-    -format "<b>%s</b>\n%b" \
-    -separator_height 5 \
-    -key "ctrl+space" \
-    -all_key "space" \
-    -corner_radius 8 \
-    -padding 20 \
-    -horizontal_padding 20 \
-    -min_icon_size 40 \
-    -max_icon_size 80 \
-    -frame_width 0 \
-    -alignment "center" &
+dunst &
 
 # Wallpaper
 feh --bg-fill --randomize ~/.wallpapers/* &
@@ -59,6 +39,7 @@ lxqt-policykit-agent &
 # Picom
 picom -b &
 
+# hotkeys
 sxhkd &
 
 # Network Applet
