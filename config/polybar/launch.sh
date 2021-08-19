@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-DIR="$HOME/.config/polybar"
+#!/bin/bash
 
 # Terminate already running bar instances
 killall -q polybar
@@ -8,4 +6,5 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-polybar -q main -c "$DIR"/config.ini &
+# Launch Polybar, using default config location ~/.config/polybar/config
+polybar mybar --config="$HOME/.config/polybar/config.ini" &
