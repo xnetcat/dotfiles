@@ -1,97 +1,29 @@
 [global]
-    font = JetBrains Mono 15
-    allow_markup = yes
-    format = "<b>%a</b>\n<i>%s</i>%p %n\n%b"
-    sort = yes
-    indicate_hidden = yes
-    alignment = left
-    bounce_freq = 3
-    show_age_threshold = 60
-    word_wrap = yes
-    ignore_newline = no
-    geometry = "600x3-10+60"
-    shrink = yes
-    transparency = 0
-    idle_threshold = 120
-    monitor = 0
-    follow = mouse
-    sticky_history = yes
-    history_length = 20
-    show_indicators = yes
-    line_height = 0
-    separator_height = 3
-    padding = 8
-    horizontal_padding = 10
-    separator_color = "#44475a"
-    startup_notification = false
-    dmenu = rofi -dmenu -theme ~/.config/rofi/rofi-dunst/theme.rasi -p "open"
-    browser = firefox
-    icon_position = left
-    min_icon_size = 100
-    max_icon_size = 100
+    geometry = "280x6-10+43"
+    format = "<b>%s</b>\n%b"
+    separator_height = 5
+    padding = 20
+    horizontal_padding = 20
+    font = Iosevka Extrabold 12
+    min_icon_size = 40
+    max_icon_size = 80
     icon_folders = /usr/share/icons/Papirus-Dark/24x24/actions:/usr/share/icons/Papirus/24x24/animations:/usr/share/icons/Papirus/24x24/apps:/usr/share/icons/Papirus/24x24/categories:/usr/share/icons/Papirus/24x24/devices:/usr/share/icons/Papirus/24x24/emblems:/usr/share/icons/Papirus/24x24/emotes:/usr/share/icons/Papirus/24x24/mimetypes:/usr/share/icons/Papirus/24x24/panel:/usr/share/icons/Papirus/24x24/places:/usr/share/icons/Papirus/24x24/status
-    corner_radius = 10
-    progress_bar = true
-    progress_bar_height = 10
-    mouse_left_click = close_current
-    mouse_middle_click = close_all 
-    mouse_right_click = do_action
+    alignment = center
+    corner_radius = 8
+    browser = google-chrome-stable
+    shrink = true
 
 [frame]
-    width = 3
-    color = "#44475a"
-
-[shortcuts]
-    close = mod1+space
-    close_all = ctrl+mod1+space
-    history = ctrl+mod1+h
-    context = ctrl+mod1+c
+    width = 0
 
 [urgency_low]
-    background = "#282a36"
-    foreground = "#f8f8f2"
-    frame_color = "#44475a"
-    highlight = "#50fa7b"
-    timeout = 2
+    foreground = "#c0caf5"
+    background = "#3d4361"
 
 [urgency_normal]
-    background = "#282a36"
-    foreground = "#f8f8f2"
-    frame_color = "#44475a"
-    highlight = "#50fa7b"
-    timeout = 2
+    foreground = "#c0caf5"
+    background = "#3d4361"
 
 [urgency_critical]
-    background = "#282a36"
-    foreground = "#ff5555"
-    frame_color = "#44475a"
-    highlight = "#50fa7b"
-    timeout = 10
-
-[vlc]
-    appname = "VLC media player"
-    format = "%b %p"
-    timeout = 1
-    new_icon = "atunes"
-
-[volume]
-    appname="Volume"
-    format = "%b %p"
-    timeout = 1
-
-[brightness]
-    appname="Brightness"
-    format = "%b %p"
-    timeout = 1
-
-[log_notifs]
-    script = ~/.config/rofi/rofi-notification/dunst_logger.sh
-
-[todoapp]
-    appname="TODO"
-    format = "<b>%a</b>\n<i>%s</i>%p %n\n%b"
-
-[Calendar]
-    appname="Calendar"
-    format = "%b"
-
+    foreground = "#c0caf5"
+    background = "#3d4361"
