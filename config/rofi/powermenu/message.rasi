@@ -1,4 +1,4 @@
-/* Confirm Dialog */
+/* Message Dialog */
 
 @import "colors.rasi"
 
@@ -9,7 +9,7 @@
 }
 
 window {
-    width:      			225px;
+    width:      			360px;
     padding:    			25px;
     border:					1px;
     border-radius:          0px;
