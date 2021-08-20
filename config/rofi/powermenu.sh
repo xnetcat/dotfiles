@@ -16,11 +16,11 @@ uptime=$(uptime -p | sed -e 's/up //g')
 rofi_command="rofi -theme $dir/style.rasi"
 
 # Options
-shutdown=""
-reboot=""
-lock=""
-suspend=""
-logout=""
+shutdown=""
+reboot="勒"
+lock=""
+suspend=""
+logout=""
 
 # Confirmation
 confirm_exit() {
