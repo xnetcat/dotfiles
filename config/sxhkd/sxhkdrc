@@ -123,8 +123,8 @@ super + Print
     flameshot full -p ~/Pictures/Screenshots
 
 # Screenshot menu
-super + Shift + s
-	flameshot gui -p ~/Pictures/Screenshots -g
+super + shift + Print
+	flameshot gui -p ~/Pictures/Screenshots
 
 # open chrome
 super + w
@@ -137,3 +137,6 @@ super + n
 # Emoji picker
 super + period
 	rofimoji --skin-tone neutral
+
+# Power menu
+super + 
