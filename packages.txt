@@ -17,6 +17,7 @@ rofimoji
 xdotool
 pavucontrol
 papirus-icon-theme
+zscroll
 ttf-iosevka
 ttf-nerd-fonts-symbols
 ttf-jetbrains-mono

@@ -3,7 +3,7 @@
 focused=$(xrdb ~/.config/X11/xresources -query all | grep color7 | cut -f2)
 normal=$(xrdb ~/.config/X11/xresources -query all | grep color8 | cut -f2)
 
-bspc monitor -d TERM CODE WEB FILES MEDIA EXTRA
+bspc monitor -d TERM CODE WEB WINDOWS FILES MEDIA TASKS EXTRA
 
 bspc config focused_border_color "focused"
 bspc config normal_border_color	 "normal"
