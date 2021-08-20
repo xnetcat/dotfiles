@@ -58,6 +58,7 @@ chmod -R +x ~/.config/polybar/scripts
 chmod -R +x ~/.config/sxhkd/scripts
 chmod +x ~/.config/bspwm/bspwmrc
 chmod +x ~/.config/polybar/launch.sh
+chmod +x ~/.config/rofi/*.sh
 chown -R $USER:$USER ~/.local
 chown -R $USER:$USER ~/.config
 chown $USER:$USER ~/.gtkrc-2.0

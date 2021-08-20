@@ -139,4 +139,9 @@ super + period
 	rofimoji --skin-tone neutral
 
 # Power menu
-super + 
+super + Pause
+	~/.config/rofi/powermenu.sh
+
+# Launcher
+super + d
+	~/.config/rofi/launcher.sh

@@ -5,6 +5,6 @@
 ## Github  : @adi1090x
 ## Twitter : @adi1090x
 
-dir="$HOME/.config/rofi/launchers"
+dir="$HOME/.config/rofi/launcher"
 
 rofi -no-lazy-grab -show drun -modi drun -theme "$dir/style.rasi"

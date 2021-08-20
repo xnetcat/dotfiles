@@ -4,7 +4,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export AWT_TOOLKIT=MToolkit
 
 # Environment variables
-export SHELL=zsh
+export SHELL=/usr/bin/zsh
 export TERMINAL=alacritty
 export BROWSER=google-chrome-stable
 export EDITOR=code
