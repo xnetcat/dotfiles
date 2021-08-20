@@ -17,7 +17,7 @@ rofi_command="rofi -theme $dir/style.rasi"
 
 # Options
 shutdown=""
-reboot="勒"
+reboot="ﰇ"
 lock=""
 suspend=""
 logout=""
