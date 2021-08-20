@@ -15,3 +15,5 @@ xorg-xinit
 xorg-xinput
 xorg-xsetroot
 zsh
+antigen-git
+polkit

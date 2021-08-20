@@ -43,7 +43,6 @@ mkdir ~/.backup_dotfiles 2> /dev/null
 # Create backup 
 echo "[INFO] Create backup"
 mv ~/.config ~/.backup_dotfiles/config 2> /dev/null
-mv ~/.local/share/fonts ~/.backup_dotfiles/fonts 2> /dev/null
 mv ~/.wallpapers ~/.backup_dotfiles/wallpapers 2> /dev/null
 
 # Copy wallpapers
@@ -55,6 +54,13 @@ echo "[INFO] Copying config files"
 export XDG_CONFIG_HOME=$HOME/.config
 cp -r ~/.dotfiles/config ~/.config 2> /dev/null
 cp ~/.dotfiles/home/.* ~/ 2> /dev/null
+chmod -R +x ~/.config/bspwm/scripts
+chmod -R +x ~/.config/polybar/scripts
+chmod -R +x ~/.config/sxhkd/scripts
+chmod -R +x ~/.config/bspwm/bspwmrc
+chown -R $USER:$USER ~/.local
+chown -R $USER:$USER ~/.config
+chown $USER:$USER ~/.gtkrc-2.0
 
 # Copy etc config
 echo "[INFO] Copying etc"

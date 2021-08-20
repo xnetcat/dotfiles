@@ -20,3 +20,4 @@ xdg-user-dirs-gtk
 rustup
 networkmanager-openvpn
 openvpn
+accountsservice
