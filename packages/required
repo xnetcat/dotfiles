@@ -1,0 +1,17 @@
+alacritty
+dunst
+polybar
+sxhkd
+bspwm
+dex
+picom-ibhagwan-git
+feh
+lxqt-policykit
+libsecret
+pulseaudio
+alsa-utils
+xorg-server
+xorg-xinit
+xorg-xinput
+xorg-xsetroot
+zsh
