@@ -18,12 +18,12 @@
 
 [urgency_low]
     foreground = "#c0caf5"
-    background = "#3d4361"
+    background = "#4d4d4d"
 
 [urgency_normal]
     foreground = "#c0caf5"
-    background = "#3d4361"
+    background = "#4d4d4d"
 
 [urgency_critical]
     foreground = "#c0caf5"
-    background = "#3d4361"
+    background = "#4d4d4d"

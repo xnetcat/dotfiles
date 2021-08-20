@@ -17,6 +17,8 @@ rofimoji
 xdotool
 pavucontrol
 papirus-icon-theme
+dracula-gtk-theme-git
+dracula-grub-theme-git
 zscroll
 ttf-iosevka
 ttf-nerd-fonts-symbols
