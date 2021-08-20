@@ -4,6 +4,6 @@
     foreground:                     #f8f8f2cc;
     border:               			@background-alt;
     border-alt:               		#6272a4;
-    selected:               		@background-alt;
+    selected:               		#FF5555ff;
     urgent:                         #ff5555ff;
 }
