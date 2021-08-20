@@ -21,3 +21,5 @@ rustup
 networkmanager-openvpn
 openvpn
 accountsservice
+network-manager-applet
+gnome-keyring

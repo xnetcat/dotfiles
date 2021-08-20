@@ -5,8 +5,8 @@ normal=$(xrdb ~/.config/X11/xresources -query all | grep color8 | cut -f2)
 
 bspc monitor -d TERM CODE WEB WINDOWS FILES MEDIA TASKS EXTRA
 
-bspc config focused_border_color "focused"
-bspc config normal_border_color	 "normal"
+bspc config focused_border_color "$focused"
+bspc config normal_border_color	 "$normal"
 bspc config border_width 2
 bspc config window_gap 10
 bspc config focus_follows_pointer false
@@ -34,7 +34,7 @@ feh --bg-fill --randomize ~/.wallpapers/* &
 dex -a -s /etc/xdg/autostart/:~/.config/autostart/
 
 # polkit
-lxqt-policykit-agent &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Picom
 picom -b &

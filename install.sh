@@ -54,10 +54,10 @@ echo "[INFO] Copying config files"
 export XDG_CONFIG_HOME=$HOME/.config
 cp -r ~/.dotfiles/config ~/.config 2> /dev/null
 cp ~/.dotfiles/home/.* ~/ 2> /dev/null
-chmod -R +x ~/.config/bspwm/scripts
 chmod -R +x ~/.config/polybar/scripts
 chmod -R +x ~/.config/sxhkd/scripts
-chmod -R +x ~/.config/bspwm/bspwmrc
+chmod +x ~/.config/bspwm/bspwmrc
+chmod +x ~/.config/polybar/launch.sh
 chown -R $USER:$USER ~/.local
 chown -R $USER:$USER ~/.config
 chown $USER:$USER ~/.gtkrc-2.0
@@ -82,7 +82,7 @@ sudo usermod -aG docker $USER
 
 # Change grub theme
 echo "[INFO] Changing grub theme"
-echo "GRUB_THEME=\"/usr/share/grub/themes/dracula/theme.txt\"" >> sudo /etc/default/grub
+echo "GRUB_THEME=\"/usr/share/grub/themes/dracula/theme.txt\"" | sudo tee -a /etc/default/grub > /dev/null
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Change default shell

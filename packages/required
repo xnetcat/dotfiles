@@ -6,7 +6,6 @@ bspwm
 dex
 picom-ibhagwan-git
 feh
-lxqt-policykit
 libsecret
 pulseaudio
 alsa-utils
@@ -17,3 +16,4 @@ xorg-xsetroot
 zsh
 antigen-git
 polkit
+polkit-gnome
