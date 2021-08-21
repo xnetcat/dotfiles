@@ -12,6 +12,9 @@ ttf-freefont
 ttf-arphic-uming
 ttf-icomoon-feather
 ttf-baekmuk
+noto-fonts
+noto-fonts-emoji
+noto-fonts-cjk
 gtk-engines
 gtk-engine-murrine
 lightdm
