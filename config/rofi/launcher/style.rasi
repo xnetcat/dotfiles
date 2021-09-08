@@ -14,8 +14,6 @@ configuration {
     display-drun: 					"";
     drun-display-format:            "{name}";
     disable-history:                false;
-    fullscreen:                     false;
-	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
 }
 
@@ -87,7 +85,7 @@ mainbox {
 }
 
 element {
-    background-color:               @al;
+    background-color:               @bg;
     text-color:                     @fg;
     orientation:                    vertical;
     border-radius:                  0%;
@@ -97,6 +95,8 @@ element {
 element-icon {
     size:                           49px;
     border:                         0px;
+    horizontal-align:   0.5;
+    vertical-align:     0.5;
 }
 
 element-text {
@@ -112,4 +112,9 @@ element selected {
 	border:							0% 0% 0% 0%;
     border-radius:                  12px;
     border-color:                  	@bg;
+}
+
+element-text, element-icon {
+    background-color: transparent;
+    text-color:       inherit;
 }
