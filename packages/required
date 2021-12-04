@@ -8,6 +8,7 @@ picom-ibhagwan-git
 feh
 libsecret
 pulseaudio
+wget
 alsa-utils
 xorg-server
 xorg-xinit
