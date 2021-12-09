@@ -4,7 +4,7 @@
     separator_height = 5
     padding = 20
     horizontal_padding = 20
-    font = Iosevka Extrabold 7
+    font = Iosevka Extrabold 
     min_icon_size = 40
     max_icon_size = 80
     icon_folders = /usr/share/icons/Papirus-Dark/24x24/actions:/usr/share/icons/Papirus/24x24/animations:/usr/share/icons/Papirus/24x24/apps:/usr/share/icons/Papirus/24x24/categories:/usr/share/icons/Papirus/24x24/devices:/usr/share/icons/Papirus/24x24/emblems:/usr/share/icons/Papirus/24x24/emotes:/usr/share/icons/Papirus/24x24/mimetypes:/usr/share/icons/Papirus/24x24/panel:/usr/share/icons/Papirus/24x24/places:/usr/share/icons/Papirus/24x24/status
