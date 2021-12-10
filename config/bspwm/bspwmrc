@@ -53,3 +53,6 @@ nm-applet --indicator &
 
 # Cursor
 xsetroot -cursor_name left_ptr &
+
+# Keyboard
+setxkbmap pl
