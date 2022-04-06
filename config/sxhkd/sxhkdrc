@@ -96,6 +96,7 @@ XF86AudioRaiseVolume
 XF86AudioLowerVolume
 	~/.config/sxhkd/scripts/volume-cat.sh -dec
 
+# Mute audio
 XF86AudioMute
 	~/.config/sxhkd/scripts/volume-cat.sh -mute
 
@@ -119,12 +120,13 @@ XF86AudioPrev
 Print
 	flameshot full -c
 
+# Screenshot save
 super + Print
-    flameshot full -p ~/Pictures/Screenshots
+	flameshot full -p ~/Pictures/Screenshots
 
-# Screenshot menu
-super + shift + Print
-	flameshot gui -p ~/Pictures/Screenshots
+# Screenshot menu/save
+super + shift + {s , Print}
+	flameshot gui {-c, -p ~/Pictures/Screenshots}
 
 # open chrome
 super + w
