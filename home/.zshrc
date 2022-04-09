@@ -12,7 +12,7 @@ antigen bundle python
 antigen bundle vscode
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zdharma-continuum/fast-syntax-highlighting
-antigen bundle darvid/zsh-poetry
+antigen bundle virtualenv
 
 # Set theme
 antigen theme fino
